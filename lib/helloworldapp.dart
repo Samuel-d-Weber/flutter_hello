@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'greeting.dart';
 
 class HelloWorldApp extends StatelessWidget {
   @override
@@ -7,6 +8,7 @@ class HelloWorldApp extends StatelessWidget {
     //MaterialApp acts as a wrapper to the app and
     //provides many features like title, home, theme etc
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Hello World App',
 
       //Scaffold acts as a binder that binds the appBar,
@@ -20,7 +22,7 @@ class HelloWorldApp extends StatelessWidget {
 
         //Center widget aligns the child in center
         body: Center(
-          child: Text('Hello World'),
+          child: Text(Greeting().salutation),
         ),
       ),
     );
